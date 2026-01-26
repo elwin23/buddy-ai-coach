@@ -1,0 +1,54 @@
+'use client'
+
+interface BuddyAvatarProps {
+  size?: 'sm' | 'md' | 'lg'
+  className?: string
+}
+
+export default function BuddyAvatar({ size = 'md', className = '' }: BuddyAvatarProps) {
+  const sizeClasses = {
+    sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16'
+  }
+
+  return (
+    <div className={`${sizeClasses[size]} ${className} flex-shrink-0`}>
+      <svg 
+        viewBox="0 0 120 120" 
+        className="w-full h-full"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        {/* Badeend lichaam (geel) - zijaanzicht */}
+        <ellipse cx="60" cy="80" rx="40" ry="25" fill="#FFD700" stroke="#FFA500" strokeWidth="2"/>
+        
+        {/* Badeend kop (geel) - zijaanzicht */}
+        <ellipse cx="50" cy="50" rx="20" ry="28" fill="#FFD700" stroke="#FFA500" strokeWidth="2"/>
+        
+        {/* Hippe pet (van de zijkant) */}
+        <path d="M 30 30 Q 50 20 70 25 L 65 40 Q 50 35 35 40 Z" fill="#1a1a1a"/>
+        <path d="M 35 32 Q 50 25 65 30" stroke="#333" strokeWidth="1.5" fill="none"/>
+        
+        {/* Bril (van de zijkant - alleen 1 glas zichtbaar) */}
+        <circle cx="45" cy="52" r="7" fill="none" stroke="#2c3e50" strokeWidth="2.5"/>
+        <line x1="38" y1="52" x2="35" y2="50" stroke="#2c3e50" strokeWidth="2"/>
+        
+        {/* Baard (van de zijkant) */}
+        <path d="M 35 60 Q 40 68 45 62 Q 50 70 55 65" fill="#8B4513" opacity="0.8"/>
+        <path d="M 38 63 Q 42 68 46 64" stroke="#654321" strokeWidth="1" fill="none"/>
+        
+        {/* Snavel (oranje) - naar rechts wijzend */}
+        <ellipse cx="70" cy="58" rx="10" ry="5" fill="#FF8C00"/>
+        <line x1="80" y1="58" x2="82" y2="58" stroke="#FF6600" strokeWidth="1"/>
+        
+        {/* Oog (achter bril) - van de zijkant */}
+        <circle cx="45" cy="52" r="2.5" fill="#000"/>
+        <circle cx="46" cy="51" r="0.8" fill="#fff"/>
+        
+        {/* Water golven onderaan */}
+        <path d="M 20 100 Q 30 95 40 100 T 60 100 T 80 100 T 100 100" stroke="#4A90E2" strokeWidth="2" fill="none" opacity="0.6"/>
+        <path d="M 25 105 Q 35 100 45 105 T 65 105 T 85 105" stroke="#4A90E2" strokeWidth="2" fill="none" opacity="0.4"/>
+      </svg>
+    </div>
+  )
+}
