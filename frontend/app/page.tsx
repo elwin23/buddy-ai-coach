@@ -28,7 +28,7 @@ export default function Home() {
         <div className="max-w-md w-full space-y-8 p-8">
           <div className="text-center">
             <div className="flex justify-center mb-4">
-              <BuddyAvatar size="lg" />
+              <BuddyAvatar size="md" />
             </div>
             <h1 className="text-3xl font-bold text-gray-900">
               Buddy - AI Coach

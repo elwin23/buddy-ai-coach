@@ -11,7 +11,7 @@ export default function PrivacyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3">
-              <BuddyAvatar size="lg" />
+              <BuddyAvatar size="md" />
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">Buddy - AI Coach</h1>
               </div>
@@ -30,7 +30,7 @@ export default function PrivacyPage() {
       <section className="bg-gradient-to-b from-blue-50 to-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
-            <BuddyAvatar size="lg" />
+            <BuddyAvatar size="md" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Hey, ik ben Buddy.
